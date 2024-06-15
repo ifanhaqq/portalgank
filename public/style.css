@@ -17,4 +17,11 @@ a {
     padding: 5px;
     width: 6rem;
     height: 2rem;
-  }
+}
+
+.bg-peoples {
+    background-image: url('img/bg-landing-page.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
