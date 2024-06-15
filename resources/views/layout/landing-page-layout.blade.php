@@ -11,7 +11,7 @@
 
     @yield('content')
 
-    @include('components.footer-admin')
+    @include('components.footer-landing-page')
 
     @yield('scripts')
 

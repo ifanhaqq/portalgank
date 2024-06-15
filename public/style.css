@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+
 .font-1{
     font-family: poppins;
 }
@@ -20,8 +29,45 @@ a {
 }
 
 .bg-peoples {
-    background-image: url('img/bg-landing-page.png');
+    background-image: url('img/landing-page-hd.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.laporkan-btn {
+    background-color: red; 
+    border-radius: 0%;
+}
+
+.laporkan-btn:hover {
+    background-color: black;
+    border-color: white;
+}
+
+#masuk-btn:hover {
+    background-color: white;
+    
+}
+
+.custom-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    animation: moveRight 12s linear infinite;
+}
+
+.custom-carousel-item {
+    min-width: 25%;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(0% - 350px)); /* Adjust card width */
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
