@@ -53,21 +53,8 @@ a {
 .custom-carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
-    animation: moveRight 12s linear infinite;
 }
 
 .custom-carousel-item {
-    min-width: 25%;
-}
-
-@keyframes moveRight {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(calc(0% - 350px)); /* Adjust card width */
-    }
-    100% {
-        transform: translateX(0);
-    }
+    min-width: 33.33%;
 }

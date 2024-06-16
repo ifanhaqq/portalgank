@@ -21,7 +21,7 @@ $(document).ready(function () {
     })
 
     function updateCarousel() {
-        const newTransform = -currentIndex * (90 / itemsPerPage)
+        const newTransform = -currentIndex * (100 / itemsPerPage)
         $('.custom-carousel-inner').css('transform', `translateX(${newTransform}%)`)
 
         prevBtn.prop('disabled', currentIndex === 0)

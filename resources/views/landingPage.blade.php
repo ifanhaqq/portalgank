@@ -27,10 +27,10 @@
             </div>
         </div>
         <div class="custom-carousel">
-            <div class="">
+            <div class="container-fluid">
                 <div class="custom-carousel-inner">
                     <div class="custom-carousel-item">
-                        <div class="card" style="width: 20rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="{{ asset('img/artikel-icon.png') }}" class="card-img-top" alt="...">
                             <div class="card-body text-white" style="background-color: black">
                                 <h5 class="card-title">Card titsdfle</h5>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="custom-carousel-item ">
-                        <div class="card" style="width: 20rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="{{ asset('img/artikel-icon.png') }}" class="card-img-top" alt="...">
                             <div class="card-body text-white" style="background-color: black">
                                 <h5 class="card-title">Card titsdfle</h5>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="custom-carousel-item ">
-                        <div class="card" style="width: 20rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="{{ asset('img/artikel-icon.png') }}" class="card-img-top" alt="...">
                             <div class="card-body text-white" style="background-color: black">
                                 <h5 class="card-title">Card titsdfle</h5>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="custom-carousel-item ">
-                        <div class="card" style="width: 20rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="{{ asset('img/artikel-icon.png') }}" class="card-img-top" alt="...">
                             <div class="card-body text-white" style="background-color: black">
                                 <h5 class="card-title">Card titsdfle</h5>
@@ -105,6 +105,29 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex" style="height: 88vh;">
+        <div class="col-sm-4">
+            <div class="d-flex flex-column">
+                <div class="" style="background-color: black; height: 44vh">
+                    <h1 class="fw-bolder text-white mt-5 ms-5"><em>KENALI <br> BERBAGAI <br> BENTUK <br> KEKERASAN</em></h1>
+                </div>
+                <div class="" style="background-color: yellow; height: 44vh">
+                    <h1 class="fw-bolder text-dark mt-5 ms-5"><em>RAHASIA PELAPOR <br> <span class="display-4 fw-bolder text-black">TERJAMIN AMAN!</span></em></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="background-color: brown; height: 88vh"></div>
+        <div class="col-sm-5 d-flex flex-column">
+            <div class="d-flex justify-content-center" style="background-color: cadetblue; height: 34vh">
+                <h1 class="text-white fw-bolder align-self-center"><em>JANGAN TAKUT <br> <span class="display-4 fw-bolder">MELAPOR!</span></em></h1>
+            </div>
+            <div class="d-flex justify-content-center" style="background-color: black; height: 54vh">
+                <h1 class="text-white fw-bolder mt-5 display-4"><em>KAMI SIAP <br> MENANGANI <br> DENGAN <span class="text-danger">SIGAP</span></em></h1>
             </div>
         </div>
     </div>
