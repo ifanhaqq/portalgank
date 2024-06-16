@@ -58,3 +58,10 @@ a {
 .custom-carousel-item {
     min-width: 33.33%;
 }
+
+.guest-box {
+    background-color: white; 
+    height: 60vh; 
+    width: 40vw;
+    border-radius: 3%;
+}

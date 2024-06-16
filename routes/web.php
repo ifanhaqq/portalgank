@@ -14,8 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landingPage');
-});
+    return view('pages.guest.landing-page');
+})->name('landing-page');
+
+Route::get('/welcome', function () {
+    return view('pages.guest.welcome-page');
+})->name('welcome-page');
+
+Route::get('/login', function () {
+    return view('pages.guest.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('pages.guest.register');
+})->name('register');
+
 Route::get('/admin', function () {
     return view('pages.admin.home');
 });
