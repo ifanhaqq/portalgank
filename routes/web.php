@@ -29,9 +29,19 @@ Route::get('/register', function () {
     return view('pages.guest.register');
 })->name('register');
 
-Route::get('/admin', function () {
+Route::get('/dashboard', function () {
     return view('pages.admin.home');
 });
-Route::get('/user', function () {
+
+
+Route::get('/home', function () {
     return view('pages.user.home');
+});
+
+Route::get('/lapor', function () {
+    return view('pages.user.lapor');
+});
+
+Route::get('/daftar-laporan', function () {
+    return view('pages.user.daftar-laporan');
 });

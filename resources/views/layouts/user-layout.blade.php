@@ -5,13 +5,11 @@
 </head>
 <body>
 
-    @include('components.header')
-
-    @include('components.nav')
+    @include('components.header-user')
 
     @yield('content')
 
-    @include('components.footer')
+    @include('components.footer-user')
 
     @yield('scripts')
 
