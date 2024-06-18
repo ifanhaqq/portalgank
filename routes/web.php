@@ -40,8 +40,12 @@ Route::get('/home', function () {
 
 Route::get('/lapor', function () {
     return view('pages.user.lapor');
-});
+})->name('lapor');
 
 Route::get('/daftar-laporan', function () {
     return view('pages.user.daftar-laporan');
-});
+})->name('daftar-laporan');
+
+Route::get('/kategori', function () {
+    return view('pages.user.kategori');
+})->name('kategori');
