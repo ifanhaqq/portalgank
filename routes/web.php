@@ -49,3 +49,7 @@ Route::get('/daftar-laporan', function () {
 Route::get('/kategori', function () {
     return view('pages.user.kategori');
 })->name('kategori');
+
+Route::get('/dashboard', function () {
+    return view('pages.admin.dashboard');
+})->name('dashboard');
