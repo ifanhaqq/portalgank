@@ -4,8 +4,9 @@
         <div class="container">
             <div class="container" style="margin-top: 12vh;">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-7 bg-black mt-4 rounded-4 mt-5">
-                        <h3 class="text-white fw-bolder mt-3 ms-3 mb-3 "><em>ARTIKEL HARI INI</em></h3>
+                    <div class="col-7 bg-black mt-4 rounded-4 mt-5 d-flex justify-content-between">
+                        <h3 class="text-white fw-bolder mt-3 ms-3 mb-3 "><em>TOTAL ARTIKEL</em></h3>
+                        <h1 class="text-white fw-bolder align-self-center me-4 align-self-center">3</h1>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center mt-4">

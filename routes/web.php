@@ -56,4 +56,20 @@ Route::get('/dashboard', function () {
 
 Route::get('/profile', function () {
     return view('pages.admin.profile');
+})->name('profile');
+
+Route::get('/artikel', function () {
+    return view('pages.admin.artikel');
+})->name('artikel');
+
+Route::get('/artikel/new', function () {
+    return view('pages.admin.artikel-new');
+})->name('artikel-new');
+
+Route::get('/artikel/edit', function () {
+    return view('pages.admin.artikel-edit');
+});
+
+Route::get('/laporan', function () {
+    return view('pages.admin.laporan');
 });

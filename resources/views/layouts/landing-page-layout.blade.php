@@ -7,7 +7,6 @@
 
    
     @include('components.header-landing-page')
-    @include('components.nav-admin')
 
     @yield('content')
 

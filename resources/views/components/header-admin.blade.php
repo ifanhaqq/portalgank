@@ -3,11 +3,15 @@
         <img class="align-self-center" src="{{ asset('img/portal-gank.png') }}" alt="people" style="height: 60px">
         <div class=" d-flex fw-bold">
             <div class="ms-4 me-4">
-                <button class="btn border border-white border-2 rounded-pill" id="masuk-btn"><a href="{{ route('lapor') }}"
+                <button class="btn border border-white border-2 rounded-pill" id="masuk-btn"><a href="{{ route('dashboard') }}"
+                        class="text-white fw-bold"><em>Dashboard</em></a></button>
+            </div>
+            <div class="ms-4 me-4">
+                <button class="btn border border-white border-2 rounded-pill" id="masuk-btn"><a href=""
                         class="text-white fw-bold"><em>Laporan</em></a></button>
             </div>
             <div class="ms-4 me-4">
-                <button class="btn border border-white border-2 rounded-pill" id="masuk-btn"><a href="{{ route('daftar-laporan') }}"
+                <button class="btn border border-white border-2 rounded-pill" id="masuk-btn"><a href="{{ route('artikel') }}"
                         class="text-white fw-bold"><em>Artikel</em></a></button>
             </div>
         </div>

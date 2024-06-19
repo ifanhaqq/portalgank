@@ -1,7 +1,7 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white"
-    style="width: 220px; height: 88vh; background-color: rgba(120, 5, 5, 1); position: fixed">
+    style="width: 130px; height: 88vh; background-color: rgba(120, 5, 5, 1); position: fixed">
 
-    <h3 class="text-center fw-bold mt-3">LAPORAN</h3>
+    <h5 class="text-center fw-bold mt-3">LAPORAN</h5>
     <hr>
 
     <div class="d-flex justify-content-center mt-4">
