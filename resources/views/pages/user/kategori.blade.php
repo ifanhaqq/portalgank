@@ -15,42 +15,24 @@
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
-                            <li class="glide__slide">
-                                <div class="card border border-2" style="width: 25rem;">
-                                    <img src="{{ asset('img/kekerasan-fisik.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-5 fw-bolder">1. Kekerasan fisik</h5>
-                                        <div class="d-flex justify-content-end">
-                                            <a href="#" class="btn bg-primary text-white fw-bolder"
-                                                data-bs-toggle="modal" data-bs-target="#exampleModal">More</a>
-                                        </div>
+                            @foreach ($articles as $article)
+                                <li class="glide__slide">
+                                    <div class="card border border-2" style="width: 25rem;">
+                                        <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-5 fw-bolder">{{ $article['title'] }}</h5>
+                                            <div class="d-flex justify-content-end">
+                                                <a href="#" class="btn bg-primary text-white fw-bolder"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#content_{{ $article['id'] }}">More</a>
+                                            </div>
 
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div class="card border border-2" style="width: 25rem;">
-                                    <img src="{{ asset('img/kekerasan-psikis.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-5 fw-bolder">2. Kekerasan psikis</h5>
-                                        <div class="d-flex justify-content-end">
-                                            <a href="#" class="btn bg-primary text-white fw-bolder">More</a>
                                         </div>
+                                    </div>
+                                </li>
+                            @endforeach
 
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div class="card border border-2" style="width: 25rem;">
-                                    <img src="{{ asset('img/perundungan.jpg') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-5 fw-bolder">3. Perundungan</h5>
-                                        <div class="d-flex justify-content-end">
-                                            <a href="#" class="btn bg-primary text-white fw-bolder">More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
 
@@ -66,50 +48,33 @@
         </div>
     </div>
 
-    <div class="modal modal-lg fade" id="exampleModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-5">
-                <div class="modal-header d-flex justify-content-center">
-                    <h5 class="modal-title fw-bolder"></h5>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex justify-content-center">
-                        <img src="{{ asset('img/kekerasan-fisik.png') }}" alt="">
+    @foreach ($articles as $article)
+        <div class="modal modal-lg fade" id="content_{{ $article['id'] }}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-5">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h5 class="modal-title fw-bolder"></h5>
                     </div>
-                    <div class="d-flex justify-content-center mt-5">
-                        <div class="col-10">
-                            <h5 class="fw-bold">Kekerasan Fisik</h5>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center">
+                            <img src="{{ asset("storage/img/{$article['image']}") }}" alt="" style="width: 500px">
+                        </div>
+                        <div class="d-flex justify-content-center mt-5">
+                            <div class="col-10">
+                                <h5 class="fw-bold">{{ $article['title'] }}</h5>
 
-                            <p class="text-black">Kekerasan fisik dilakukan oleh pelaku kepada Korban dengan kontak fisik
-                                oleh pelaku kepada Korban dengan atau tanpa menggunakan alat bantu. Kekerasan fisik yang
-                                dimaksud dapat berupa: <br>
-                            <ol>
-                                <li>tawuran atau perkelahian massal</li>
-                                <li>penganiayaan</li>
-                                <li>perkelahian</li>
-                                <li>eksploitasi ekonomi melalui kerja paksa untuk memberikan 
-                                    keuntungan ekonomi bagi pelaku
-                                </li>
-                                <li>pembunuhan</li>
-                                <li>perbuatan lain yang dinyatakan sebagai Kekerasan 
-                                    fisik dalam ketentuan peraturan
-                                    perundang-undangan.</li>
-                            </ol>
-                            </p>
+                                <p class="text-black">{{ $article['content'] }}</p>
+                            </div>
                         </div>
                     </div>
-
-
-
-
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button type="button" class="btn bg-secondary rounded-pill fw-bold text-white"
-                        data-bs-dismiss="modal">Close</button>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn bg-secondary rounded-pill fw-bold text-white"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
 @endsection
 
 @section('scripts')
