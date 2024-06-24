@@ -8,11 +8,9 @@
                 <a class="nav-link text-white" href="#"><em>Kategori</em></a>
             </div>
             <div class="ms-4 me-4 align-self-center">
-                <a class="nav-link text-white"><em>Penanganan</em></a>
+                <a class="nav-link text-white"><em>About Us</em></a>
             </div>
-            <div class="ms-4 me-4 align-self-center">
-                <a class="nav-link text-white"><em>Pencegahan</em></a>
-            </div>
+            
         </div>
     </div>
 </nav>
