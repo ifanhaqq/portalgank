@@ -16,7 +16,21 @@
             </div>
         </div>
         <div class="d-flex justify-content-end me-3" id="profile">
-            <img src="{{ asset('img/people-icon.png') }}" alt="people" style="height: 40px">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><img
+                        src="{{ asset('img/people-icon.png') }}" alt="people" style="height: 40px"></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <form action="{{ route('logout') }}" class="align-self-center" method="POST">
+                            @csrf
+                            <button type="submit" class="btn logout-button dropdown-item">
+                                <h6 class="bi bi-arrow-right-square-fill me-4 "> LOGOUT</h6>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

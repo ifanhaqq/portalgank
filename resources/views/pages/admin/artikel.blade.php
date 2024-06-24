@@ -18,13 +18,20 @@
                     <ul class="glide__slides mt-4">
                         @foreach ($articles as $article)
                             <li class="glide__slide">
-                                <div class="card border border-2" style="width: 22rem;">
-                                    <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
+                                <div class="card" style="width: 22rem;">
+                                    <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top border-danger" alt="..." style="border: 4px solid rgba(120, 5, 5, 1)">
+                                    <div class="card-body text-white" style="background-color: black">
                                         <h5 class="card-title mb-5 fw-bolder">{{ $article['title'] }}</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                            of
+                                            the
+                                            card's
+                                            content.</p>
                                         <div class="d-flex justify-content-end">
+                                            <a href="{{ route('edit-article', $article['id']) }}" class="btn bg-warning text-white fw-bolder me-2">Edit</a>
+                                            <a href="{{ route('delete-article', $article['id']) }}" class="btn bg-danger text-white fw-bolder me-2">Hapus</a>
                                             <a href="#" class="btn bg-primary text-white fw-bolder"
-                                                data-bs-toggle="modal" data-bs-target="#content_{{ $article['id'] }}">More</a>
+                                                data-bs-toggle="modal" data-bs-target="#content_{{ $article['id'] }}">Detail</a>
                                         </div>
 
                                     </div>

@@ -25,7 +25,7 @@
 
             <div class="d-flex justify-content-center mb-4">
                 <button class="btn btn-dark me-2"><a href="{{ route('login') }}"><h3 class="ms-4 me-4 text-white">SATGAS</h3></a></button>
-                <button class="btn btn-danger ms-2"><h3>PENGGUNA</h3></button>
+                <button class="btn btn-danger ms-2"><a href="{{ route('login')}}"><h3 class="text-white">PENGGUNA</h3></a></button>
             </div>
 
         </div>

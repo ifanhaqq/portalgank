@@ -20,15 +20,16 @@
                     <h1 class="text-white text-center mt-2 fw-bold">MASUK</h1>
                 </div>
                 <div class="col-11 align-self-center text-black fw-bold mt-4">
-                    <form>
+                    <form method="POST" action="{{ route('authenticate') }}">
+                        @csrf
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
                             <input type="email" class="form-control rounded-pill border border-3 border-dark"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                id="exampleInputEmail1" name="email">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control rounded-pill border border-3 border-dark mb-2"
+                            <input type="password" class="form-control rounded-pill border border-3 border-dark mb-2" name="password"
                                 id="exampleInputPassword1">
                             <div id="emailHelp" class="form-text d-flex justify-content-between">
                                 <a href="" class="mt-1">Lupa password?</a>
