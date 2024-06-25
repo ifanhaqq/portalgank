@@ -19,16 +19,38 @@
                 </tr>
             </thead>
             <tbody class="border border-black border-3">
-                <tr class="border border-black border-3">
-                    <th scope="row">1</th>
-                    <td class="border border-black border-3">8 September 2023</td>
-                    <td class="border border-black border-3">Otto</td>
-                    <td class="d-flex justify-content-center border border-0">
-                        <div class="col-9 bg-primary text-center rounded-pill text-white fw-bolder">Ditinjau</div>
-                    </td>
-                    <td class="border border-black border-3"><a href="" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill h4"></i></a></td>
-                </tr>
+                @for ($i = 0; $i < $count; $i++)
+                    <tr class="border border-black border-3">
+                        <th scope="row">1</th>
+                        <td class="border border-black border-3">{{ $chronologies[$i]['date'] }}</td>
+                        <td class="border border-black border-3">{{ $chronologies[$i]['category'] }}</td>
+                        <td class="d-flex justify-content-center border border-0">
+                            @switch($reports[$i]['status'])
+                                @case('tinjau')
+                                    <div class="col-9 bg-primary text-center rounded-pill text-white fw-bolder">
+                                        Ditinjau
+                                    </div>
+                                    @break
+
+                                @case('proses')
+                                    <div class="col-9 bg-warning text-center rounded-pill text-white fw-bolder">
+                                        Diproses
+                                    </div>
+                                    @break
+
+                                @case('selesai')
+                                    <div class="col-9 bg-success text-center rounded-pill text-white fw-bolder">
+                                        Selesai
+                                    </div>
+                                    @break
+                            @endswitch
+                        </td>
+                        <td class="border border-black border-3"><a href="" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill h4"></i></a></td>
+                    </tr>
+                @endfor
+
+
             </tbody>
         </table>
     </div>

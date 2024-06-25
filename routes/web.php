@@ -5,6 +5,7 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,10 +39,6 @@ Route::get('/lapor', function () {
     return view('pages.user.lapor');
 })->name('lapor');
 
-Route::get('/daftar-laporan', function () {
-    return view('pages.user.daftar-laporan');
-})->name('daftar-laporan');
-
 Route::get('/kategori', [ArticleController::class, 'index'])->name('kategori');
 
 Route::get('/profile', function () {
@@ -62,18 +59,21 @@ Route::post('/artikel/update/{id}', [ArticleController::class, 'update'])->name(
 
 Route::get('/artikel/delete/{id}', [ArticleController::class, 'delete'])->name('delete-article');
 
-Route::get('/laporan', function () {
-    return view('pages.admin.laporan');
-});
-
 
 // Fix
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/laporan', [AdminController::class, 'getReports'])->name('get-reports');
+    Route::get('/laporan/tinjau', [AdminController::class, 'getTinjauReports'])->name('get-tinjau-reports');
+    Route::get('/laporan/proses', [AdminController::class, 'getProsesReports'])->name('get-proses-reports');
+    Route::get('/laporan/selesai', [AdminController::class, 'getSelesaiReports'])->name('get-selesai-reports');
+
 });
 
 Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/home', [MemberController::class, 'index'])->name('user.dashboard');
+    Route::post('/store-report', [ReportController::class, 'store'])->name('store-report');
+    Route::get('/daftar-laporan', [MemberController::class, 'reportsList'])->name('daftar-laporan');
 });
 
 Route::post("/logout", [UserController::class, "logout"])->name("logout");
