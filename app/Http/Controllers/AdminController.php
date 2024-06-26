@@ -50,38 +50,92 @@ class AdminController extends Controller
                  ->join('chronologies', 'chronologies.id', '=', 'reports.chronology_id')
                  ->join('suspects', 'suspects.id', '=', 'reports.suspect_id')
                  ->select(
-                  'suspects.profession as suspect_profession'
-                 )->get();
+                  'suspects.profession as suspect_profession',
+                  'chronologies.date as chronology_date',
+                  'chronologies.location as chronology_location',
+                  'reporters.name as reporter_name',
+                  'chronologies.category as chronology_category',
+                  'chronologies.detail as chronology_detail',
+                  'chronologies.supporting_evidence as chronology_supporting_evidence',
+                  'reports.status as report_status',
+                  'reports.id as report_id'
 
-      dd($reports);
+                 )->get();
+                 
+
+      $data = [
+         'reports' => $reports,
+      ];
+
+      // dd($reports);
+
+      return view('pages.admin.laporan-tinjau', $data);
                  
    }
 
    public function getProsesReports()
    {
       $reports = DB::table('reports')
-                 ->where('status', '=', 'tinjau')
+                 ->where('status', '=', 'proses')
                  ->join('reporters', 'reporters.id', '=', 'reports.reporter_id')
                  ->join('chronologies', 'chronologies.id', '=', 'reports.chronology_id')
                  ->join('suspects', 'suspects.id', '=', 'reports.suspect_id')
-                 ->select()->get();
+                 ->select(
+                  'suspects.profession as suspect_profession',
+                  'chronologies.date as chronology_date',
+                  'chronologies.location as chronology_location',
+                  'reporters.name as reporter_name',
+                  'chronologies.category as chronology_category',
+                  'chronologies.detail as chronology_detail',
+                  'chronologies.supporting_evidence as chronology_supporting_evidence',
+                  'reports.status as report_status',
+                  'reports.id as report_id'
 
-      dd($reports);
+                 )->get();
+                 
+
+      $data = [
+         'reports' => $reports,
+      ];
+
+      // dd($reports);
+
+      return view('pages.admin.laporan-proses', $data);
                  
    }
 
    public function getSelesaiReports()
    {
       $reports = DB::table('reports')
-                 ->where('status', '=', 'tinjau')
+                 ->where('status', '=', 'selesai')
                  ->join('reporters', 'reporters.id', '=', 'reports.reporter_id')
                  ->join('chronologies', 'chronologies.id', '=', 'reports.chronology_id')
                  ->join('suspects', 'suspects.id', '=', 'reports.suspect_id')
-                 ->select();
+                 ->select(
+                  'suspects.profession as suspect_profession',
+                  'chronologies.date as chronology_date',
+                  'chronologies.location as chronology_location',
+                  'reporters.name as reporter_name',
+                  'chronologies.category as chronology_category',
+                  'chronologies.detail as chronology_detail',
+                  'chronologies.supporting_evidence as chronology_supporting_evidence',
+                  'reports.status as report_status',
+                  'reports.id as report_id'
 
-      dd($reports);
+                 )->get();
+                 
+
+      $data = [
+         'reports' => $reports,
+      ];
+
+      // dd($reports);
+
+      return view('pages.admin.laporan-proses', $data);
                  
    }
+
+
 
    public function formatDateIndonesian($date)
    {

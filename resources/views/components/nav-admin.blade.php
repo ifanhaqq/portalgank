@@ -25,16 +25,20 @@
     </div>
     <div class="d-flex justify-content-center mt-3">
         <div class="d-flex flex-column">
-            <img class="align-self-center" src="{{ asset('img/laporan-proses.png') }}" alt=""
-                style="width: 65px">
-            <P class="fw-bold align-self-center mt-2">PROSES</P>
+            <a href="{{ route('get-proses-reports') }}" class="text-white">
+                <img class="align-self-center" src="{{ asset('img/laporan-proses.png') }}" alt=""
+                    style="width: 65px">
+                <P class="fw-bold align-self-center mt-2">PROSES</P>
+            </a>
         </div>
     </div>
     <div class="d-flex justify-content-center mt-3">
         <div class="d-flex flex-column">
-            <img class="align-self-center" src="{{ asset('img/laporan-selesai.png') }}" alt=""
-                style="width: 65px">
-            <P class="fw-bold align-self-center mt-2">SELESAI</P>
+            <a href="{{ route('get-selesai-reports') }}" class="text-white">
+                <img class="align-self-center" src="{{ asset('img/laporan-selesai.png') }}" alt=""
+                    style="width: 65px">
+                <P class="fw-bold align-self-center mt-2">SELESAI</P>
+            </a>
         </div>
     </div>
 

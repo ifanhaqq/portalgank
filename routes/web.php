@@ -67,6 +67,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/laporan/tinjau', [AdminController::class, 'getTinjauReports'])->name('get-tinjau-reports');
     Route::get('/laporan/proses', [AdminController::class, 'getProsesReports'])->name('get-proses-reports');
     Route::get('/laporan/selesai', [AdminController::class, 'getSelesaiReports'])->name('get-selesai-reports');
+    Route::post('/update-status', [ReportController::class, 'updateStatus'])->name('update-status');
 
 });
 

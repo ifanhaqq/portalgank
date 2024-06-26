@@ -34,18 +34,18 @@
                                 </tr>
                             </thead>
                             <tbody class="border border-black border-3">
-                                @for ($i = 0; $i < $count; $i++)
+                                @foreach ($reports as $report)
                                     <tr class="border border-black border-3">
-                                        <th scope="row">{{ $i + 1 }}</th>
-                                        <td class="border border-black border-3">{{ $chronologiesDate[$i] }}</td>
-                                        <td class="border border-black border-3">{{ $chronologies[$i]['location'] }}</td>
-                                        <td class="border border-black border-3">{{ $reporters[$i]['name'] }}</td>
-                                        <td class="border border-black border-3">{{ $chronologies[$i]['category'] }}</td>
+                                        <th scope="row">1.</th>
+                                        <td class="border border-black border-3">{{ $report->chronology_date }}</td>
+                                        <td class="border border-black border-3">{{ $report->chronology_location }}</td>
+                                        <td class="border border-black border-3">{{ $report->reporter_name }}</td>
+                                        <td class="border border-black border-3">{{ $report->chronology_category }}</td>
                                         <td class="border border-black border-3">
-                                            {{ $chronologies[$i]['detail'] }}
+                                            {{ $report->chronology_detail }}
                                         </td>
                                         <td class="border border-black border-3">
-                                            <a href="{{ asset("storage/img/{$chronologies[$i]['supporting_evidence']}") }}"
+                                            <a href="{{ asset("storage/img/{$report->chronology_supporting_evidence}") }}"
                                                 target="_blank"><em>Lihat bukti</em></a>
                                         </td>
                                         <td class="border border-black border-3">
@@ -53,8 +53,8 @@
                                                 data-bs-target="#exampleModal"><em>Lihat disini</em></a>
                                         </td>
                                         <td class="d-flex justify-content-center border border-0">
-                                            <div class="change-status col-9" data-id="{{ $reports[$i]['id'] }}">
-                                                @switch($reports[$i]['status'])
+                                            <div class="change-status col-9" data-id="{{ $report->report_id }}">
+                                                @switch($report->report_status)
                                                     @case('tinjau')
                                                         <button type="button"
                                                             class="btn bg-primary text-center rounded-pill text-white fw-bolder"
@@ -82,7 +82,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                @endfor
+                                @endforeach
 
                             </tbody>
                         </table>

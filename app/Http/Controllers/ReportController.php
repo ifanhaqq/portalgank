@@ -54,4 +54,15 @@ class ReportController extends Controller
 
         return redirect()->route('daftar-laporan');
     }
+
+    public function updateStatus(Request $request)
+    {
+        $report = Report::find($request->report_id);
+
+        $report->status = $request->status;
+
+        $report->save();
+
+        return redirect()->route('get-reports');
+    } 
 }
