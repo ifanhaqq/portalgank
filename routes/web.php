@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
-
 Route::get('/welcome', function () {
     return view('pages.guest.welcome-page');
 })->name('welcome-page');
@@ -61,6 +59,13 @@ Route::get('/artikel/delete/{id}', [ArticleController::class, 'delete'])->name('
 
 
 // Fix
+
+//Landing page
+Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
+Route::get('/about-us', function () {
+    return view('pages.guest.about-us');
+})->name('about-us');
+
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::get('/laporan', [AdminController::class, 'getReports'])->name('get-reports');

@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mb-5">
+    <div class="container-fluid mb-5" id="artikel">
 
         <div class="glide">
             <div class="container d-flex justify-content-between mt-5">

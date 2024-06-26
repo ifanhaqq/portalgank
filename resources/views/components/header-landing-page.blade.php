@@ -5,10 +5,10 @@
                 <button class="btn border border-danger rounded-pill" id="masuk-btn"><a href="" class="text-danger"><em>Masuk</em></a></button>
             </div>
             <div class="ms-4 me-4 align-self-center">
-                <a class="nav-link text-white" href="#"><em>Kategori</em></a>
+                <a class="nav-link text-white" href="#artikel"><em>Artikel</em></a>
             </div>
             <div class="ms-4 me-4 align-self-center">
-                <a class="nav-link text-white"><em>About Us</em></a>
+                <a href="{{ route('about-us') }}" class="nav-link text-white"><em>About Us</em></a>
             </div>
             
         </div>
