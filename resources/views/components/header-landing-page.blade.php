@@ -2,7 +2,10 @@
     <div class="container-fluid">
         <div class="container d-flex justify-content-center fw-bold">
             <div class="ms-4 me-4">
-                <button class="btn border border-danger rounded-pill" id="masuk-btn"><a href="" class="text-danger"><em>Masuk</em></a></button>
+                <button class="btn border border-danger rounded-pill" id="masuk-btn"><a href="" class="text-danger fw-bolder"><em>Masuk</em></a></button>
+            </div>
+            <div class="ms-4 me-4 align-self-center">
+                <a class="nav-link text-white" href="#home"><em><u>Home</u></em></a>
             </div>
             <div class="ms-4 me-4 align-self-center">
                 <a class="nav-link text-white" href="#artikel"><em>Artikel</em></a>
