@@ -46,7 +46,7 @@
         <div class="glide">
             <div class="container d-flex justify-content-between mt-5">
                 <div class="align-self-end">
-                    <h1 class="fw-bolder"><em>ARTIKEL</em></h1>
+                    <h1 class="fw-bolder display-4"><em><u>ARTIKEL</u></em></h1>
                 </div>
 
                 <div class="align-self-center">

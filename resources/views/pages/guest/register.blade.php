@@ -22,9 +22,9 @@
                 <div class="col-11 align-self-center text-black fw-bold mt-4">
                     <form>
                         <div class="mb-1">
-                            <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                            <input type="email" class="form-control rounded-pill border border-3 border-dark"
-                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="" class="form-label">Nama Lengkap</label>
+                            <input type="txt" class="form-control rounded-pill border border-3 border-dark"
+                                id="" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-1">
                             <label for="exampleInputEmail1" class="form-label">Email</label>

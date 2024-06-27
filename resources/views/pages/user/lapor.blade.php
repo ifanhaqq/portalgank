@@ -12,7 +12,7 @@
         </div>
 
         <div class="row d-flex justify-content-center mt-4 mb-5">
-            <div class="col-7 bg-primary-subtle">
+            <div class="col-7 bg-primary-subtle ">
                 <form method="POST" action="{{ route('store-report') }}">
                     @csrf
                     <div class="mb-5">

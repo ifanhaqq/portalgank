@@ -20,12 +20,13 @@
                     <h1 class="text-white text-center mt-2 fw-bold">Selamat Datang</h1>
                 </div>
             </div>
-
-            <h2 class="text-center mt-5 mb-5">Siapa anda?</h2>
+            <img src="../img/siapa anda.png" alt="" width="20%" style="margin: auto" class="mt-2">
+            <h4 class="text-center  mb-5 fw-bolder"> 
+                Silahkan pilih jenis pengguna!</h4>
 
             <div class="d-flex justify-content-center mb-4">
-                <button class="btn btn-dark me-2"><a href="{{ route('login') }}"><h3 class="ms-4 me-4 text-white">SATGAS</h3></a></button>
-                <button class="btn btn-danger ms-2"><a href="{{ route('login')}}"><h3 class="text-white">PENGGUNA</h3></a></button>
+                <button class="btn btn-dark me-2"><a href="{{ route('login') }}"><h5 class="ms-4 me-4 text-white">SATGAS PPKS</h5></a></button>
+                <button class="btn btn-danger ms-2"><a href="{{ route('login')}}"><h5 class="text-white">Anggota Instansi</h5></a></button>
             </div>
 
         </div>

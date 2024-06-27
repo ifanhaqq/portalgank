@@ -18,7 +18,7 @@
                             @foreach ($articles as $article)
                                 <li class="glide__slide">
                                     <div class="card border border-2" style="width: 25rem;">
-                                        <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top"
+                                        <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top img-fluid"
                                             alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title mb-5 fw-bolder">{{ $article['title'] }}</h5>
