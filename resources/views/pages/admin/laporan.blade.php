@@ -10,8 +10,7 @@
                             Semua Laporan
                         </h3>
                         <div class="input-group rounded border border-2">
-                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                                aria-describedby="search-addon" />
+                            <input type="text" class="form-control rounded" placeholder="Search" id="searchInput" />
                             <span class="input-group-text border-0" id="search-addon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -27,7 +26,7 @@
                         @endif
 
 
-                        <table class="table border border-black border-3 mt-4">
+                        <table class="table border border-black border-3 mt-4" id="reportsTable">
                             <thead>
                                 <tr>
                                     <th scope="col" class="border border-black border-3 fw-bolder" style="width: 3vw">No
@@ -172,4 +171,5 @@
 
 @section('scripts')
     <script src="{{ asset('js/update-status.js') }}"></script>
+    <script src="{{ asset('js/search.js' )}}"></script>
 @endsection

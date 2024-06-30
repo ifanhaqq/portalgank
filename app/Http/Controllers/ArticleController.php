@@ -44,7 +44,7 @@ class ArticleController extends Controller
         $article->save();
         $image->storeAs('public/img', $imageName);
 
-        return redirect()->route('artikel');
+        return redirect()->route('artikel')->with('success', 'Artikel anda telah berhasil dibuat!');
 
     }
 
@@ -80,7 +80,7 @@ class ArticleController extends Controller
 
         $article->save();
 
-        return redirect()->route("edit-article", $article->id);
+        return redirect()->route("edit-article", $article->id)->with('success', 'Artikel anda telah berhasil diubah!');
     }
 
     public function delete($id)
@@ -93,6 +93,6 @@ class ArticleController extends Controller
 
         $article->delete();
 
-        return redirect()->route('artikel');
+        return redirect()->route('artikel')->with('success', 'Artikel telah berhasil dihapus!');
     }
 }

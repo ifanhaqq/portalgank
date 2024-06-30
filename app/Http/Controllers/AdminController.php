@@ -44,8 +44,8 @@ class AdminController extends Controller
             'chronologies.supporting_evidence as chronology_supporting_evidence',
             'reports.status as report_status',
             'reports.id as report_id'
-
-         )->get();
+         )->orderBy('chronology_date', 'desc')
+         ->get();
 
       foreach ($reports as $report) {
          $report->chronology_date = $this->formatDateIndoConverter($report->chronology_date);
@@ -75,7 +75,9 @@ class AdminController extends Controller
             'reports.status as report_status',
             'reports.id as report_id'
 
-         )->get();
+         )
+         ->orderBy('chronology_date', 'desc')
+         ->get();
 
       foreach ($reports as $report) {
          $report->chronology_date = $this->formatDateIndoConverter($report->chronology_date);
@@ -109,7 +111,8 @@ class AdminController extends Controller
             'reports.status as report_status',
             'reports.id as report_id'
 
-         )->get();
+         )->orderBy('chronology_date', 'desc')
+         ->get();
 
       foreach ($reports as $report) {
          $report->chronology_date = $this->formatDateIndoConverter($report->chronology_date);
@@ -143,7 +146,8 @@ class AdminController extends Controller
             'reports.status as report_status',
             'reports.id as report_id'
 
-         )->get();
+         )->orderBy('chronology_date', 'desc')
+         ->get();
 
       foreach ($reports as $report) {
          $report->chronology_date = $this->formatDateIndoConverter($report->chronology_date);
@@ -153,7 +157,7 @@ class AdminController extends Controller
          'reports' => $reports,
       ];
 
-      return view('pages.admin.laporan-proses', $data);
+      return view('pages.admin.laporan-selesai', $data);
 
    }
 

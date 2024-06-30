@@ -7,6 +7,14 @@
             <div class="d-flex">
                 <h3 class="fw-bolder me-2 align-self-center mt-5 mb-4">Edit Artikel</h3>
             </div>
+            <div class="col-10">
+                @if (session('success'))
+                <div class="alert alert-success mt-3 alert-dismissable d-flex justify-content-between" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
+            </div>
 
             <div class="col-10 bg-secondary-subtle rounded-5 mb-5">
                 <form method="POST" action="{{ route('update-article', $article->id) }}" enctype="multipart/form-data">

@@ -21,7 +21,7 @@
                         </div>
                         <div class="mb-3 mt-3 me-3">
                             <label class="form-label fw-bold text-black" for="exampleCheck1">Upload gambar</label>
-                            <input type="file" class="form-control border border-black fw-bold text-black" name="file" id="exampleCheck1">
+                            <input type="file" class="form-control border border-black fw-bold text-black" name="file" id="exampleCheck1" accept="image/*"> 
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary mb-4 rounded-pill text-white fw-bold">Submit</button>

@@ -6,8 +6,15 @@
             <div class="col-3 mt-4 d-flex justify-content-center rounded-pill" style="background-color: rgba(120, 5, 5, 1)">
                 <h4 class="text-white fw-bolder mt-3 mb-3">Status Laporan Anda</h4>
             </div>
-
         </div>
+
+        @if (session('success'))
+            <div class="alert alert-success mt-3 alert-dismissable d-flex justify-content-between" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
         <table class="table border border-black border-3 mt-4">
             <thead>
                 <tr>
@@ -30,19 +37,19 @@
                                     <div class="col-9 bg-primary text-center rounded-pill text-white fw-bolder">
                                         Ditinjau
                                     </div>
-                                    @break
+                                @break
 
                                 @case('proses')
                                     <div class="col-9 bg-warning text-center rounded-pill text-white fw-bolder">
                                         Diproses
                                     </div>
-                                    @break
+                                @break
 
                                 @case('selesai')
                                     <div class="col-9 bg-success text-center rounded-pill text-white fw-bolder">
                                         Selesai
                                     </div>
-                                    @break
+                                @break
                             @endswitch
                         </td>
                         <td class="border border-black border-3"><a href="" data-bs-toggle="modal"

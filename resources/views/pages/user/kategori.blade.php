@@ -12,9 +12,9 @@
 
         <div class="row mt-5 d-flex justify-content-center">
             <div class=" d-flex justify-content-center">
-                <div class="glide" style="margin-left: 10vh">
+                <div class="glide" >
                     <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
+                        <ul class="glide__slides ms-5">
                             @foreach ($articles as $article)
                                 <li class="glide__slide">
                                     <div class="card" style="width: 22rem;">

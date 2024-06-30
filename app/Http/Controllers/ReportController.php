@@ -57,7 +57,7 @@ class ReportController extends Controller
 
         $image->storeAs('public/img', $imageName);
 
-        return redirect()->route('daftar-laporan');
+        return redirect()->route('daftar-laporan')->with('success', 'Laporan anda telah berhasil ditambahkan! Silahkan menunggu untuk informasi selanjutnya.');
     }
 
     public function updateStatus(Request $request)
@@ -68,6 +68,6 @@ class ReportController extends Controller
 
         $report->save();
 
-        return redirect()->route('get-reports')->with('success', 'The status successfully update!');
+        return redirect()->route('get-reports')->with('success', 'Status laporan anda telah berhasil diubah!');
     } 
 }
