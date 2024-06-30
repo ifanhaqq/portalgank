@@ -13,7 +13,7 @@
 
         <div class="row d-flex justify-content-center mt-4 mb-5">
             <div class="col-7 bg-primary-subtle ">
-                <form method="POST" action="{{ route('store-report') }}">
+                <form method="POST" action="{{ route('store-report') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-5">
                         <div class="mb-3 mt-3">
@@ -96,7 +96,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Upload Bukti Pendukung (jika ada)</label>
-                            <input type="file" class="form-control" id="exampleInputPassword1" name="chronology_file">
+                            <input type="file" class="form-control" id="exampleInputPassword1" name="chronology_file" accept="image/*">
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">

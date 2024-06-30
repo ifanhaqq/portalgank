@@ -1,5 +1,5 @@
 <div class="fixed-icon">
-    <a href="" class="text">
+    <a href="https://wa.me/6289674616924" target="_blank" class="text">
         <div class="d-flex justify-content-user flex-column align-items-center" style="width: 150px">
             <img src="{{ asset('img/wansaf-footer.png') }}" alt="" style="height: 70px">
             <p class="font-1 text-center mt-2">Hubungi kami</p>

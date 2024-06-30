@@ -7,7 +7,7 @@
                 <div class="col-11">
                     <div class="d-flex flex-column">
                         <h3 class="fw-bolder mt-5 mb-4">
-                            Semua Laporan
+                            Laporan Selesai
                         </h3>
                         <div class="input-group rounded border border-2">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -34,9 +34,10 @@
                                 </tr>
                             </thead>
                             <tbody class="border border-black border-3">
+                                @php $no = 1 @endphp
                                 @foreach ($reports as $report)
                                     <tr class="border border-black border-3">
-                                        <th scope="row">1.</th>
+                                        <th scope="row">{{ $no }}</th>
                                         <td class="border border-black border-3">{{ $report->chronology_date }}</td>
                                         <td class="border border-black border-3">{{ $report->chronology_location }}</td>
                                         <td class="border border-black border-3">{{ $report->reporter_name }}</td>
@@ -82,6 +83,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @php $no++ @endphp
                                 @endforeach
 
                             </tbody>

@@ -75,9 +75,9 @@ a {
 
 .fixed-icon {
     position: fixed;
-    bottom: 100px;
+    bottom: 70px;
     /* Adjust the distance from the bottom */
-    right: 70px;
+    right: 50px;
     /* Adjust the distance from the left */
     width: 100px;
     /* Adjust the size of the icon */

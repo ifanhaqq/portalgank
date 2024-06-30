@@ -14,6 +14,8 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         $manualIncrement = count(Report::get()) + 1;
+        $image = $request->file('chronology_file');
+        $imageName = $image->getClientOriginalName();
 
         $report = new Report();
         $reporter = new Reporter();
@@ -35,10 +37,11 @@ class ReportController extends Controller
 
         $chronology->id = $manualIncrement;
         $chronology->date = $request->chronology_date;
+        $chronology->user_id = Auth::user()->id;
         $chronology->category = $request->chronology_category;
         $chronology->location = $request->chronology_location;
         $chronology->detail = $request->chronology_detail;
-        $chronology->supporting_evidence = $request->chronology_file;
+        $chronology->supporting_evidence = $imageName;
 
         $report->id = $manualIncrement;
         $report->user_id = Auth::user()->id;
@@ -52,6 +55,8 @@ class ReportController extends Controller
         $suspect->save();
         $chronology->save();
 
+        $image->storeAs('public/img', $imageName);
+
         return redirect()->route('daftar-laporan');
     }
 
@@ -63,6 +68,6 @@ class ReportController extends Controller
 
         $report->save();
 
-        return redirect()->route('get-reports');
+        return redirect()->route('get-reports')->with('success', 'The status successfully update!');
     } 
 }

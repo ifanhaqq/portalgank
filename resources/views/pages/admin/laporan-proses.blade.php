@@ -7,7 +7,7 @@
                 <div class="col-11">
                     <div class="d-flex flex-column">
                         <h3 class="fw-bolder mt-5 mb-4">
-                            Semua Laporan
+                            Laporan Diproses
                         </h3>
                         <div class="input-group rounded border border-2">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -16,7 +16,8 @@
                                 <i class="bi bi-search"></i>
                             </span>
                         </div>
-                        <table class="table border border-black border-3 mt-4">
+                        <p class=" text-black mt-4"><i class="bi bi-crosshair"></i> Klik pada nama pelapor untuk menghubungi pelapor tersebut.</p>
+                        <table class="table border border-black border-3">
                             <thead>
                                 <tr>
                                     <th scope="col" class="border border-black border-3 fw-bolder" style="width: 3vw">No
@@ -34,12 +35,13 @@
                                 </tr>
                             </thead>
                             <tbody class="border border-black border-3">
+                                @php $no = 1 @endphp
                                 @foreach ($reports as $report)
                                     <tr class="border border-black border-3">
-                                        <th scope="row">1.</th>
+                                        <th scope="row">{{ $no }}</th>
                                         <td class="border border-black border-3">{{ $report->chronology_date }}</td>
                                         <td class="border border-black border-3">{{ $report->chronology_location }}</td>
-                                        <td class="border border-black border-3">{{ $report->reporter_name }}</td>
+                                        <td class="border border-black border-3"><a href="https://wa.me/6289674616924" target="_blank" class="text-decoration-underline">{{ $report->reporter_name }}</a></td>
                                         <td class="border border-black border-3">{{ $report->chronology_category }}</td>
                                         <td class="border border-black border-3">
                                             {{ $report->chronology_detail }}
@@ -82,6 +84,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @php $no++ @endphp
                                 @endforeach
 
                             </tbody>

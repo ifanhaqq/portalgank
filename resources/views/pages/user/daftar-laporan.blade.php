@@ -19,13 +19,13 @@
                 </tr>
             </thead>
             <tbody class="border border-black border-3">
-                @for ($i = 0; $i < $count; $i++)
+                @foreach ($reports as $report)
                     <tr class="border border-black border-3">
                         <th scope="row">1</th>
-                        <td class="border border-black border-3">{{ $chronologies[$i]['date'] }}</td>
-                        <td class="border border-black border-3">{{ $chronologies[$i]['category'] }}</td>
+                        <td class="border border-black border-3">{{ $report->chronology_date }}</td>
+                        <td class="border border-black border-3">{{ $report->chronology_category }}</td>
                         <td class="d-flex justify-content-center border border-0">
-                            @switch($reports[$i]['status'])
+                            @switch($report->report_status)
                                 @case('tinjau')
                                     <div class="col-9 bg-primary text-center rounded-pill text-white fw-bolder">
                                         Ditinjau
@@ -48,7 +48,7 @@
                         <td class="border border-black border-3"><a href="" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill h4"></i></a></td>
                     </tr>
-                @endfor
+                @endforeach
 
 
             </tbody>

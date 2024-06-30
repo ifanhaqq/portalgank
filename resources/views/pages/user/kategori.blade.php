@@ -12,16 +12,18 @@
 
         <div class="row mt-5 d-flex justify-content-center">
             <div class=" d-flex justify-content-center">
-                <div class="glide">
+                <div class="glide" style="margin-left: 10vh">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             @foreach ($articles as $article)
                                 <li class="glide__slide">
-                                    <div class="card border border-2" style="width: 25rem;">
-                                        <img src="{{ asset("storage/img/{$article['image']}") }}" class="card-img-top img-fluid"
-                                            alt="...">
-                                        <div class="card-body">
+                                    <div class="card" style="width: 22rem;">
+                                        <img src="{{ asset("storage/img/{$article['image']}") }}"
+                                            class="card-img-top border-danger" alt="..."
+                                            style="border: 4px solid rgba(120, 5, 5, 1)">
+                                        <div class="card-body text-white" style="background-color: black">
                                             <h5 class="card-title mb-5 fw-bolder">{{ $article['title'] }}</h5>
+                                            <p class="card-text text-truncate mb-5">{{ $article['content'] }}</p>
                                             <div class="d-flex justify-content-end">
                                                 <a href="#" class="btn bg-primary text-white fw-bolder"
                                                     data-bs-toggle="modal"
@@ -82,6 +84,7 @@
         var glide = new Glide('.glide', {
             type: 'carousel',
             perView: 3,
+            gap: 0
         })
 
         glide.mount()
