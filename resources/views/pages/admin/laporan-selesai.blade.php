@@ -27,8 +27,7 @@
                                     <th scope="col" class="border border-black border-3 fw-bolder ">Kategori</th>
                                     <th scope="col" class="border border-black border-3 fw-bolder ">Detail</th>
                                     <th scope="col" class="border border-black border-3 fw-bolder ">Bukti Pendukung</th>
-                                    <th scope="col" class="border border-black border-3 fw-bolder ">Detail Terduga Pelaku
-                                    </th>
+                                    <th scope="col" class="border border-black border-3 fw-bolder ">Ulasan</th>
                                     <th scope="col" class="border border-black border-3 fw-bolder " style="width: 22vh">
                                         Status</th>
                                 </tr>
@@ -50,7 +49,7 @@
                                                 target="_blank"><em>Lihat bukti</em></a>
                                         </td>
                                         <td class="border border-black border-3">
-                                            <a href="" role="button" data-bs-toggle="modal"
+                                            <a href="" role="button" data-bs-toggle="modal" class="view-feedback-btn"
                                                 data-bs-target="#exampleModal"><em>Lihat disini</em></a>
                                         </td>
                                         <td class="d-flex justify-content-center border border-0">
@@ -84,6 +83,9 @@
                                         </td>
                                     </tr>
                                     @php $no++ @endphp
+                                    @php
+                                        $reporter_name = $report->reporter_name
+                                    @endphp
                                 @endforeach
 
                             </tbody>
@@ -113,16 +115,12 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Detail terduga pelaku</h1>
+                    <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Ulasan dari: Hanifan Haqin</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div>
-                        <h5>Nama : Ipan</h5>
-                        <hr>
-                        <h5>Profesi : Mahasiswa</h5>
-                        <hr>
-                        <h5>Nomor Induk : 09012</h5>
+                        <p id="feedback-content">Dapat segera dipercepat prosesnya</p>
                     </div>
                 </div>
                 <div class="modal-footer">

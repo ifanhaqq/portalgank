@@ -144,7 +144,7 @@ class AdminController extends Controller
             'chronologies.detail as chronology_detail',
             'chronologies.supporting_evidence as chronology_supporting_evidence',
             'reports.status as report_status',
-            'reports.id as report_id'
+            'reports.id as report_id',
 
          )->orderBy('chronology_date', 'desc')
          ->get();

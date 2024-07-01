@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\UserController;
@@ -74,6 +75,7 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::post('/store-report', [ReportController::class, 'store'])->name('store-report');
     Route::get('/daftar-laporan', [MemberController::class, 'reportsList'])->name('daftar-laporan');
     Route::get('/kategori', [ArticleController::class, 'index'])->name('kategori');
+    Route::post('/store-feedback', [FeedbackController::class, 'store'])->name('store-feedback');
 });
 
 Route::post("/logout", [UserController::class, "logout"])->name("logout");

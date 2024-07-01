@@ -52,8 +52,12 @@
                                 @break
                             @endswitch
                         </td>
-                        <td class="border border-black border-3"><a href="" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill h4"></i></a></td>
+                        @if ($report->report_status === 'selesai')
+                            <td class="border border-black border-3"><a href="" class="feedback-btn" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" data-id="{{ $report->report_id }}"><i class="bi bi-plus-circle-fill h4"></i></a></td>
+                        @else
+                            <td class="border border-black border-3"><i class="bi bi-plus-circle-fill h4"></i></td>
+                        @endif
                     </tr>
                 @endforeach
 
@@ -71,8 +75,10 @@
                 <div class="modal-body">
                     <p class="text-center text-black">Ulasan anda sangat diperlukan untuk proses penanganan dan pencegahan
                         kekerasan seksual yang lebih baik di masa mendatang.</p>
-                    <form action="">
-                        <textarea class="form-control border border-black border-1" name="" id="" cols="30" rows="5"
+                    <form method="POST" action="{{ route('store-feedback') }}">
+                        @csrf
+                        <input type="hidden" id="report_id" name="report_id">
+                        <textarea class="form-control border border-black border-1" name="content" id="" cols="30" rows="5"
                             placeholder="Ulasan...."></textarea>
 
                 </div>
@@ -83,4 +89,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/feedback.js') }}"></script>
 @endsection

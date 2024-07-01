@@ -31,6 +31,7 @@ class MemberController extends Controller
                 'chronologies.date as chronology_date',
                 'chronologies.category as chronology_category',
                 'reports.status as report_status',
+                'reports.id as report_id'
             )->get();
         
         $adminController = new AdminController;
